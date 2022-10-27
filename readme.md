@@ -2,7 +2,7 @@
 
 Experimenting with JetBrains [WebStorm](https://www.jetbrains.com/webstorm/) and [Underscore.js](https://underscorejs.org/#)
 
-![](assets/kendo.png)
+![](assets/kendo1.png)
 
 ```javascript
 <script type="text/javascript">
