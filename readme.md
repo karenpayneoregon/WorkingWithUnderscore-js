@@ -20,9 +20,9 @@ Experimenting with JetBrains [WebStorm](https://www.jetbrains.com/webstorm/) and
     });
 
     $('#btnFilter').click(function (event) {
-    _.each(_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; }), function (element, index) {
-        const output = index + ' ' + element;
-        kendoConsole.log(output);
+        _.each(_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; }), function (element, index) {
+            const output = index + ' ' + element;
+            kendoConsole.log(output);
     });
 });
 </script>
