@@ -1,0 +1,32 @@
+var employeesCollection = [
+    {
+        "id":1,
+        "name":"Karen",
+        "designation":"SE",
+        "salary":25000
+    },
+    {
+        "id":2,
+        "name":"Joe",
+        "designation":"SSE",
+        "salary":35000
+    },
+    {
+        "id":3,
+        "name":"Mary",
+        "designation":"Manager",
+        "salary":45000
+    },
+    {
+        "id":4,
+        "name":"Frank",
+        "designation":"Accountant",
+        "salary":30000
+    },
+    {
+        "id":5,
+        "name":"Anne",
+        "designation":"SSE",
+        "salary":35000
+    }
+];
