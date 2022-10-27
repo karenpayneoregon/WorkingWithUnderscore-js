@@ -40,7 +40,7 @@
         });
 
         $('#btnPluck').click(function (event) {
-            _.each(_.pluck(employeesCollection, "name"), function (element, index, list) {
+            _.each(_.pluck(employeesCollection, "name"), function (element, index) {
                 const output = index + ' ' + element;
                 kendoConsole.log(output);
             });
