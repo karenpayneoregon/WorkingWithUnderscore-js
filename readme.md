@@ -16,7 +16,7 @@ Experimenting with JetBrains [WebStorm](https://www.jetbrains.com/webstorm/) and
         _.each(_.pluck(employeesCollection, "name"), function (element, index, list) {
             const output = index + ' ' + element;
             kendoConsole.log(output);
-        });
+        })
     });
 
 
