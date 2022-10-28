@@ -2,6 +2,9 @@
 
 Experimenting with JetBrains [WebStorm](https://www.jetbrains.com/webstorm/) and [Underscore.js](https://underscorejs.org/#)
 
+Underscore.js is a utility-belt library for JavaScript that provides support for the usual functional suspects (each, map, reduce, filter...) without extending any core JavaScript objects.
+
+
 ![](assets/kendo1.png)
 
 ```javascript
