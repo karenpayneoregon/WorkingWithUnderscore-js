@@ -28,47 +28,19 @@
         <div class="row">
             <div class="well-container">
                 <div class="col text-center">
-                    <div class="console" style="overflow-y: scroll; height:200px;"></div>
+                    <div id="kpConsole" class="console" style="overflow-y: scroll; height:200px;"></div>
                 </div>
             </div>
         </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <button type="button" class="btn btn-dark col-12" id="btnClearConsole">Clear</button>
+                </div>
+            </div>
+
     </div>
 
-    <script type="text/javascript">
 
-        $('#btnMax').click(function (event) {
-            const numbers = [100, 50, 400, 66, 7900];
-            kendoConsole.log("Max " + _.max(numbers));
-        });
-
-        $('#btnPluck').click(function (event) {
-
-            _.each(_.pluck(employeesCollection, "name"), function (element, index) {
-                const output = index + ' ' + element;
-                kendoConsole.log(output);
-            });
-        });
-
-        $('#btnFilter').click(function (event) {
-            _.each(_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 === 0; }), function (element, index) {
-                const output = index + ' ' + element;
-                kendoConsole.log(output);
-            });
-        });
-
-        $('#btnSort').click(function (event) {
-            var ordered = _.sortBy(employeesCollection, 'name');
-            /*
-             * ordered works fine but kendoConsole adds them in reverse order
-             * so we clone/reverse the collection then we are good to go.
-             */
-            _.each( _.clone(ordered).reverse(), function(v, i) {
-                kendoConsole.log( v.name );
-            });
-        });
-
-
-    </script>
 
 </body>
 </html>
