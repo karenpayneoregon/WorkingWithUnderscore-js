@@ -7,7 +7,7 @@ Experimenting with JetBrains [WebStorm](https://www.jetbrains.com/webstorm/)
 Underscore.js is a utility-belt library for JavaScript that provides support for the usual functional suspects (each, map, reduce, filter...) without extending any core JavaScript objects.
 
 
-![](assets/kendo1.png)
+![](assets/kendo2.png)
 
 ```javascript
 <script type="text/javascript">
