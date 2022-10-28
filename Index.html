@@ -19,8 +19,9 @@
         <div class="row">
             <div class="col">
                 <button type="button" class="btn btn-primary col-3" id="btnMax">Max</button>
-                <button class="btn btn-primary col-3" id="btnPluck">Pluck</button>
-                <button class="btn btn-primary col-3" id="btnFilter">Filter</button>
+                <button class="btn btn-primary col-2" id="btnPluck">Pluck</button>
+                <button class="btn btn-primary col-2" id="btnFilter">Filter</button>
+                <button class="btn btn-primary col-2" id="btnSort">Sort</button>
             </div>
         </div>
 
@@ -41,6 +42,7 @@
         });
 
         $('#btnPluck').click(function (event) {
+
             _.each(_.pluck(employeesCollection, "name"), function (element, index) {
                 const output = index + ' ' + element;
                 kendoConsole.log(output);
@@ -48,11 +50,23 @@
         });
 
         $('#btnFilter').click(function (event) {
-            _.each(_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; }), function (element, index) {
+            _.each(_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 === 0; }), function (element, index) {
                 const output = index + ' ' + element;
                 kendoConsole.log(output);
             });
         });
+
+        $('#btnSort').click(function (event) {
+            var ordered = _.sortBy(employeesCollection, 'name');
+            /*
+             * ordered works fine but kendoConsole adds them in reverse order
+             * so we clone/reverse the collection then we are good to go.
+             */
+            _.each( _.clone(ordered).reverse(), function(v, i) {
+                kendoConsole.log( v.name );
+            });
+        });
+
 
     </script>
 
