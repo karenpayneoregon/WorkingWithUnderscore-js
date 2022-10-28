@@ -7,6 +7,9 @@ const employeesCollection = [
 ];
 
 $(document).ready(function () {
+
+
+
     $('#btnMax').click(function (event) {
         const numbers = [100, 50, 400, 66, 7900];
         kendoConsole.log("Max " + _.max(numbers));
@@ -34,12 +37,46 @@ $(document).ready(function () {
          * so we clone/reverse the collection then we are good to go.
          */
         _.each(_.clone(ordered).reverse(), function (v, i) {
-            kendoConsole.log(v.name);
+            kendoConsole.log(`<span class="text-primary fw-bold">${v.name}`) + '</span>';
         });
+    });
+
+    $('#btnSome').click(function (event) {
+
+        let hasDesignation = function (value) {
+            return (value.designation === 'SSE');
+        };
+
+        let result = _.some(employeesCollection, hasDesignation) === true ? 'Yes' : 'No';
+        kendoConsole.log('<span class="text-danger">employeesCollection</span> has at least one SSE ' + result );
+
+    });
+
+
+    $('#btnGetSalary').click(function (event) {
+
+        let hasDesignation = function (value) {
+            return (value.designation === 'SSE');
+        };
+
+        let person = _.get(employeesCollection[0], 'name');
+        let salary = _.get(employeesCollection[0], 'salary');
+
+
+        kendoConsole.log('<span class="fw-bold">' + person + '</span> makes ' + formatter.format(salary));
+
     });
 
     $('#btnClearConsole').click(function (event) {
         document.getElementById('kpConsole').innerHTML = '';
     });
 
+
+    /*
+    * Format object as USD currency
+    * */
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
 });
